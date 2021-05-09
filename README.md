@@ -1,6 +1,7 @@
 # Diploma / front 
 
 Ссылка на сайт - https://mydiploma.students.nomoredomains.monster
+Макет - https://www.figma.com/file/157gHKLn55j5aCimeC5elF/Diploma-(Copy)?node-id=891%3A3857
 
 **Автор**  
 Илья Шнырев  
