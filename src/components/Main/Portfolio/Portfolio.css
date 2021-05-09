@@ -1,0 +1,115 @@
+@import url("../../../vendor/fonts/Inter/inter.css");
+
+.Portfolio {
+    width: 100%;
+    background-color: #202020;
+}
+.Portfolio__container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.Portfolio__heading {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 20px;
+    color: #8b8b8b;
+    margin: 0 0 30px 0;
+}
+.Portfolio__block {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 105px 0;
+}
+.Portfolio__column {
+  border-bottom: 1px solid #424242;
+  padding-bottom: 19px;
+  max-width: 1140px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 0 0;
+}
+.Portfolio__column:last-child{
+    border: none;
+}
+.Portfolio__text {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: -0,04em;
+    color: #fff;
+    margin: 0 0 20px 0;
+}
+.Portfolio__image {
+    width: 20px;
+    height: 20px;
+    margin: 20px 0 0 0;
+}
+.Portfolio__link{
+    cursor: pointer;
+    transition: opacity .5s linear;
+}
+.Portfolio__link:hover {
+    opacity: 0.8;
+}
+@media screen and (max-width: 1279px){
+    .Portfolio__heading{
+        max-width: 1000px;
+    }
+    .Portfolio__container{
+        max-width: 1000px;
+    }
+}
+@media screen and (max-width: 1050px){
+    .Portfolio__heading{
+        max-width: 668px;
+    }
+    .Portfolio__container{
+        max-width: 668px;
+    }
+    .Portfolio__text{
+        font-size: 28px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .Portfolio__heading{
+        max-width: 560px;
+    }
+    .Portfolio__container{
+        max-width: 560px;
+    }
+}
+@media screen and (max-width: 600px){
+    .Portfolio__heading{
+        max-width: 520px;
+    }
+    .Portfolio__container{
+        max-width: 520px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .Portfolio__heading{
+        max-width: 292px;
+    }
+    .Portfolio__container{
+        max-width: 292px;
+    }
+    .Portfolio__image {
+        width: 16px;
+        height: 16px;
+    }
+    .Portfolio__text {
+        font-size: 18px;
+        line-height: 28px;
+        max-width: 250px;
+    }
+    .Portfolio__text:last-child {
+        margin-bottom: 0px;
+    }
+}

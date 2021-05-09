@@ -1,0 +1,120 @@
+@import url("../../vendor/fonts/Inter/inter.css");
+
+.Footer {
+    background-color: #202020;
+    width: 100%;
+}
+.Footer__container{
+    max-width: 1140px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.Footer__heading {
+    max-width: 1140px;
+    margin: 80px 0 0 0;
+    text-align: center;
+    border-bottom: 1px solid #424242;
+    padding: 0 0 20px 0;
+    font-family: Inter;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #8b8b8b;
+}
+.Footer__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0 0 0;
+    max-width: 1140px;
+}
+.Footer__copyright {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #fff;
+    margin: 0 0 20px 0;
+}
+.Footer__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+.Footer__link {
+    margin: 0 0 0 20px;
+}
+.Footer__link:first-child{
+    margin: 0;
+}
+.Footer__text {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity .5s linear;
+}
+.Footer__text:hover{
+    opacity: 0.8;
+}
+.Footer__disable{
+    display: none;
+}
+@media screen and (max-width: 1279px) {
+    .Footer__container {
+        max-width: 1000px;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .Footer__container {
+        max-width: 708px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .Footer__container {
+        max-width: 560px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .Footer__container {
+        max-width: 520px;
+    }
+}
+@media  screen and (max-width: 550px) {
+    .Footer__container {
+        max-width: 300px;
+    }
+    .Footer__heading{
+        margin-top: 45px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .Footer__block{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .Footer__list {
+        flex-direction: column;
+        text-align: center;
+    }
+    .Footer__link {
+        margin: 0 0 12px 0;
+    }
+    .Footer__link:first-child {
+        margin-bottom: 12px;
+        margin-top: 30px;
+    }
+    .Footer__copyright{
+        margin-top: 18px;
+        margin-bottom: 10px;
+    }
+}

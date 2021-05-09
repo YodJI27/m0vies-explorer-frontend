@@ -1,0 +1,138 @@
+@import url('../../../vendor/fonts/Inter/inter.css');
+
+.promo {
+  width: 100%;
+  background-color: #073042;
+  margin: 0;
+  display: flex;
+}
+.promo__container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 0 0 75px 0;
+}
+.promo__heading {
+    color: #fff;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 58px;
+    margin: 0;
+}
+.promo__text{
+    margin-top: 75px;
+    max-width: 640px;
+}
+.promo__image {
+    width: 310px;
+    height: 304px;
+    margin: 75px 0 0 190px;
+}
+.promo__paragraph {
+    color: #fff;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    max-width: 310px;
+    margin-top: 36px;
+    opacity: 0.5;
+    mix-blend-mode: normal;
+    margin-bottom: 146px;
+}
+.promo__link {
+    margin: 0;
+    width: 129px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    background-color: #073042;
+    color: #fff;
+    cursor: pointer;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    transition: opacity .5s linear;
+}
+.promo__link:hover {
+    opacity: 0.8;
+}
+@media screen and (max-width: 1279px){
+    .promo__image {
+        margin-left: 50px;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .promo__container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .promo__image {
+        margin: 140px 0 0 0;
+    }
+    .promo__heading {
+        text-align: center;
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .promo__text {
+        margin-top: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .promo__paragraph {
+        text-align: center;
+        max-width: 260px;
+        margin-top: 22px;
+        margin-bottom: 92px;
+    }
+    .promo__button {
+        margin: 92px 0 76px 0;
+    }
+    .promo__link {
+        padding: 10px;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 600px){
+    .promo__heading{
+        font-size: 35px;
+        line-height: 43px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .promo__image {
+        width: 210px;
+        height: 210px;
+        margin-top: 70px;
+    }
+    .promo__heading {
+        font-size: 30px;
+        line-height: 38px;
+        max-width: 307px;
+    }
+    .promo__text {
+        margin-top: 44px;
+    }
+    .promo__paragraph {
+        margin: 24px 0 80px 0;
+    }
+    .promo__button {
+        margin: 80px 0 30px 0;
+    }
+    .promo__container {
+        padding-bottom: 30px;
+    }
+}
