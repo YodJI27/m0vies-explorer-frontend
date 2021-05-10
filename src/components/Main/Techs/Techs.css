@@ -1,0 +1,120 @@
+@import url("../../../vendor/fonts/Inter/inter.css");
+
+.Techs {
+  background-color: #272727;
+  width: 100%;
+  margin: 0;
+}
+.Techs__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.Techs__text {
+  margin: 0 auto;
+  width: 1140px;
+  margin-top: 100px;
+}
+
+.Techs__block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Techs__heading {
+  max-width: 600px;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  line-height: 58px;
+  letter-spacing: -0.04em;
+  margin: 90px 0 26px 0;
+  color: #fff;
+}
+.Techs__description {
+  max-width: 460px;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.04em;
+  margin: 0 0 100px 0;
+  color: #fff;
+}
+.Techs__list {
+  list-style: none;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(7, 90px);
+  column-gap: 10px;
+  margin-bottom: 100px;
+  padding: 0;
+}
+.Techs__column {
+  max-height: 60px;
+  background-color: #303030;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.04em;
+  padding: 21px 0 21px 0;
+}
+.Techs__column:last-child{
+    margin-right: 0px;
+}
+
+@media screen and (max-width: 1150px){
+  .Techs__column {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .Techs__list{
+    grid-template-columns: repeat(7, 84px);
+    margin-bottom: 90px;
+  }
+  .Techs__description{
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .Techs__list {
+    grid-template-rows: (2, 55px);
+    grid-template-columns: repeat(5, 84px);
+    row-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Techs__list {
+  grid-template-columns: repeat(4, 84px);
+  }
+}
+@media screen and (max-width: 550px) {
+  .Techs__list {
+    grid-template-columns: repeat(2, 84px);
+    margin-bottom: 70px;
+  }
+  .Techs__heading {
+    font-size: 30px;
+    line-height: 37px;
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+  .Techs__description {
+    font-size: 11px;
+    line-height: 16px;
+    margin-bottom: 50px;
+  }
+}
