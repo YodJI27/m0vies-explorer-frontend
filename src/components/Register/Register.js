@@ -2,12 +2,30 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Register.css";
 
-const Register = () => {
-  const [name, setName] = useState("Виталий");
-  const [email, setEmail] = useState("pochta@yandex.ru");
-  const [password, setPassword] = useState("asdasq");
+const Register = (props) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [nameValid, setNameValid] = useState(false);
+  const [passwordValid, setPasswodValid] = useState(false);
+  const [emailValid, setEmailValid] = useState(false);
+
+  const handleValidationName = (evt) => {
+    setName(evt.target.value);
+    if (!evt.target.value) {
+      setNameError("Имя не должно быть пустым");
+      setNameValid(false);
+    } else if (evt.target.value.length <= 2) {
+      setNameError("Имя должно быть больше двух символов");
+      setNameValid(false);
+    } else {
+      setNameError("");
+      setNameValid(true);
+    }
+  };
 
   const handleValidationEmail = (evt) => {
     setEmail(evt.target.value);
@@ -15,10 +33,13 @@ const Register = () => {
     const val = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
     if (!evt.target.value) {
       setEmailError("Email не может быть пустым");
+      setEmailValid(false);
     } else if (!val.test(String(evt.target.value).toLowerCase())) {
       setEmailError("Некорректный email");
+      setEmailValid(false);
     } else {
       setEmailError("");
+      setEmailValid(true);
     }
   };
 
@@ -26,32 +47,38 @@ const Register = () => {
     setPassword(evt.target.value);
     if (!evt.target.value) {
       setPasswordError("Пароль не может быть пустым");
+      setPasswodValid(false);
     } else if (evt.target.value.length < 8) {
       setPasswordError("Пароль должен содержать не менее 8 символов");
+      setPasswodValid(false);
     } else {
       setPasswordError("");
+      setPasswodValid(true);
     }
   };
 
-  const handleChangeName = (evt) => {
-    setName(evt.target.value);
+  const handleRegister = (evt) => {
+    evt.preventDefault();
+    props.handleRegisterUser(name, email, password);
   }
 
   return (
     <section className="Register">
-      <div className="Register__container">
+      <form className="Register__container" onSubmit={handleRegister}>
         <label className="Register__label">
           <p className="Register__text">Имя</p>
           <input
-            className="Register__input"
+            className={`Register__input ${
+              nameError.length === 0 ? "" : "Register__err"
+            }`}
             type="text"
             size="44"
             maxLength="40"
             minLength="2"
-            onChange={handleChangeName}
+            onChange={handleValidationName}
             value={name || ""}
           ></input>
-          <span className="Register__validation"></span>
+          <span className="Register__validation">{nameError}</span>
         </label>
         <label className="Register__label">
           <p className="Register__text" type="email">
@@ -83,7 +110,15 @@ const Register = () => {
           ></input>
           <span className="Register__validation">{passwordError}</span>
         </label>
-        <button className="Register__button" type="button">
+        <button
+          type="submit"
+          className={`Register__button ${
+            nameValid && passwordValid && emailValid
+              ? ""
+              : "Register__button-disable"
+          }`}
+          disabled={nameValid && passwordValid && emailValid ? false : true}
+        >
           Зарегестрироваться
         </button>
         <p className="Register__reg">
@@ -92,7 +127,7 @@ const Register = () => {
             &nbsp;Войти
           </Link>
         </p>
-      </div>
+      </form>
     </section>
   );
 };

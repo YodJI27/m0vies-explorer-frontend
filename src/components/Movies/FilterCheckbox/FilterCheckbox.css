@@ -18,7 +18,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #3ddc84;
+  background-color: #4285f4; 
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -28,7 +28,7 @@
   content: "";
   height: 16px;
   width: 16px;
-  right: 2px;
+  left: 2px;
   bottom: 2px;
   background-color: white;
   -webkit-transition: 0.4s;
@@ -36,17 +36,17 @@
 }
 
 input:checked + .slider {
-  background-color: #4285f4;
+  background-color: #3ddc84;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #4285f4;
+  box-shadow: 0 0 1px #3ddc84;
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(-16px);
-  -ms-transform: translateX(-16px);
-  transform: translateX(-16px);
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
 }
 
 .slider.round {

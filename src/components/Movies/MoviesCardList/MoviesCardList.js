@@ -1,23 +1,34 @@
 import MoviesCard from "../MoviesCard/MoviesCard";
 import "./MoviesCardList.css";
 
-const MoviesCardList = () => {
+const MoviesCardList = (props) => {
   return (
     <section className="MoviesCardList">
-      <div className="MoviesCardList__container-movies">
-        <MoviesCard title={"33 слова о дизайне"} />
-        <MoviesCard title={'Киноальманах "100 лет дизайна"'} />
-        <MoviesCard title={"В погоне Бенкси"} />
-        <MoviesCard title={"Баския: Взрыв реальности"} />
-        <MoviesCard title={"Бег это свобода"} />
-        <MoviesCard title={"Книготорговцы"} />
-        <MoviesCard title={"Когда я думаю в Германии ночью"} />
-        <MoviesCard title={"Gimme Danger: История Игги"} />
-        <MoviesCard title={"Дженис: Маленькая девочка грустит"} />
-        <MoviesCard title={"33 слова о дизайне"} />
-        <MoviesCard title={"33 слова о дизайне"} />
-        <MoviesCard title={"33 слова о дизайне"} />
-      </div>
+      {props.isMovies ? (
+        props.movieCard.length === 0 ? (
+          <p className="text__error">Ничего не найдено</p>
+        ) : (
+          <div className="MoviesCardList__container-movies">
+            {props.movieCard.map((item) => {
+              return (
+                <MoviesCard
+                  movie={item}
+                  key={item.id}
+                  handleSaveMovie={props.handleSaveMovie}
+                  savedMovies={props.savedMovies}
+                  isToggle={props.isToggle}
+                  handleRemoveSaveMovie={props.handleRemoveSaveMovie}
+                  handleDisableIsLoaded={props.handleDisableIsLoaded}
+                />
+              );
+            })}
+          </div>
+        )
+      ) : (
+        <p className="text__error">
+          Нажмите кнопку или введите конкретный фильм
+        </p>
+      )}
     </section>
   );
 };

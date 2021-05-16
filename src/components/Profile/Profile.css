@@ -33,7 +33,7 @@
     width: 410px;
     justify-content: space-between;
     border-bottom: 1px solid #424242;
-    padding-bottom: 16px;;
+    padding-bottom: 16px;
 }
 .profile__text {
     font-family: Inter;
@@ -90,6 +90,9 @@
     cursor: pointer;
     outline: none;
     transition: opacity .5s linear;
+}
+.profile__reg-disable {
+    opacity: 0.5;
 }
 .profile__reg:hover, .profile__logOut:hover {
     opacity: 0.8;

@@ -76,13 +76,14 @@ const Header = (props) => {
       );
     }
   };
-
   return (
     <header
       className={`header ${
-        props.loggedIn ||
         locationLink.pathname === "/signup" ||
-        locationLink.pathname === "/signin"
+        locationLink.pathname === "/signin" ||
+        locationLink.pathname === "/movies" ||
+        locationLink.pathname === "/saved-movies" ||
+        locationLink.pathname === "/profile"
           ? "header__dark"
           : ""
       }`}

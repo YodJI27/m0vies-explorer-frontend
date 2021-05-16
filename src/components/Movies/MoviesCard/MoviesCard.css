@@ -8,6 +8,7 @@
     width: 100%;
     height: 151px;
     margin: 0 0 14px 0;
+    cursor: pointer;
 }
 .MoviesCard__block {
     display: flex;
@@ -37,17 +38,18 @@
     padding: 0;
     cursor: pointer;
     transition: opacity .5s linear;
+    background-image: url('../../../images/like_unactive.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .MoviesCard__like:hover {
     opacity: 0.8;
 }
+.MovieCard__link {
+    cursor: pointer;
+}
 .cards__like_active{
     background-image: url('../../../images/like_active.png');
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.cards__like_inactive{
-    background-image: url('../../../images/like_unactive.png');
     background-repeat: no-repeat;
     background-position: center;
 }
