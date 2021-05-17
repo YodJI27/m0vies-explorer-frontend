@@ -55,7 +55,7 @@ const SearchForm = (props) => {
   };
   
 const handleSubmit = (e) => {
-    e.preventDefault();
+     e.preventDefault();
     const filteredMoviesArray = filteringMoviesArray(props.localStorageMovies, props.value);
     props.addFilteredMovie(filteredMoviesArray);
   };
@@ -80,7 +80,7 @@ const handleSubmit = (e) => {
             value={props.isToggle ?  props.savedSearch : props.value}
             onChange={props.isToggle ? props.handleSearchSaved : props.handleSearch}
           ></input>
-          <button className="SearchForm__circle" onClick={props.editMovies}>
+          <button className="SearchForm__circle" onClick={props.editMovies} type="submit">
             <img className="SearchFrom__image" src={icon} alt="иконка"></img>
           </button>
         </form>

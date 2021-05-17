@@ -61,8 +61,8 @@ const App = () => {
           history.push("/");
         }
       });
-    }
-  });
+    } // eslint-disable-next-line
+  }, []);
   // Получение фильмов
   const editMovies = () => {
     setIsLoaded(true);

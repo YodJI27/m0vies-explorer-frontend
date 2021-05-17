@@ -14,6 +14,7 @@ const Register = (props) => {
   const [emailValid, setEmailValid] = useState(false);
 
   const handleValidationName = (evt) => {
+    evt.preventDefault();
     setName(evt.target.value);
     if (!evt.target.value) {
       setNameError("Имя не должно быть пустым");
@@ -28,6 +29,7 @@ const Register = (props) => {
   };
 
   const handleValidationEmail = (evt) => {
+    evt.preventDefault();
     setEmail(evt.target.value);
     // eslint-disable-next-line
     const val = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
@@ -44,6 +46,7 @@ const Register = (props) => {
   };
 
   const handleValidationPassword = (evt) => {
+    evt.preventDefault();
     setPassword(evt.target.value);
     if (!evt.target.value) {
       setPasswordError("Пароль не может быть пустым");

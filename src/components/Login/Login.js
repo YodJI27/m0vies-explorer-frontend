@@ -11,6 +11,7 @@ const Login = (props) => {
   const [emailValid, setEmailValid] = useState(false);
 
   const handleValidationEmail = (evt) => {
+    evt.preventDefault();
     setEmail(evt.target.value);
     // eslint-disable-next-line
     const val = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
@@ -27,6 +28,7 @@ const Login = (props) => {
   };
 
   const handleValidationPassword = (evt) => {
+    evt.preventDefault();
     setPassword(evt.target.value);
     if (!evt.target.value) {
       setPasswordError("Пароль не может быть пустым");
