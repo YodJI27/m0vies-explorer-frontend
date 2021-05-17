@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import Preloader from "../Preloader/Preloader";
 
 const Movies = (props) => {
-
   let moviesCount;
   let moviesCountNew;
 
@@ -29,7 +28,6 @@ const Movies = (props) => {
   useEffect(() => {
     props.handleLoggenIn();
   });
-
   return (
     <section className="Movies">
       <SearchForm
@@ -47,6 +45,8 @@ const Movies = (props) => {
           movieCard={
             props.filteredMovies.length !== 0
               ? props.filteredMovies.slice(0, numberMovies)
+              : props.localStorageMovies.length !== 0
+              ? props.localStorageMovies.slice(0, numberMovies)
               : ""
           }
           isMovies={props.isMovies}
@@ -62,7 +62,8 @@ const Movies = (props) => {
       <div className="Movies__block">
         <button
           className={`Movies__button ${
-            numberMovies >= props.filteredMovies.length
+            numberMovies >= props.filteredMovies.length &&
+            numberMovies >= props.localStorageMovies.length
               ? "Movies__button-disable"
               : ""
           }`}

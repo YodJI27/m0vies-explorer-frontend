@@ -1,9 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import "./Profile.css";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import { useLocation } from "react-router";
 
 const Profile = (props) => {
   const currentUser = useContext(CurrentUserContext);
+  const location = useLocation();
 
   useEffect(() => {
     props.handleLoggenIn();
@@ -48,7 +50,7 @@ const Profile = (props) => {
       setNameValid(true);
     }
   };
-
+ 
   const handleSubmit = (evt) => {
     evt.preventDefault();
     props.handleChangeUser(name, email);
@@ -85,6 +87,7 @@ const Profile = (props) => {
             ></input>
           </label>
           <span className="Register__validation">{emailError}</span>
+          <p className="text__error">{props.messageProfile}</p>
           <button
           className={`profile__reg ${
             nameValid && emailValid ? "" : "profile__reg-disable"

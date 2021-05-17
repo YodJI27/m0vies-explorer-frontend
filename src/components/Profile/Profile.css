@@ -91,6 +91,9 @@
     outline: none;
     transition: opacity .5s linear;
 }
+.text__error-disable {
+    display: none;
+}
 .profile__reg-disable {
     opacity: 0.5;
 }

@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useEffect } from "react";
-import { Route, Switch, useHistory } from "react-router";
+import { Route, Switch, useHistory, useLocation } from "react-router";
 import Main from "../Main/Main";
 import Movies from "../Movies/Movies";
 import SavedMovies from "../SavedMovies/SavedMovies";
@@ -39,6 +39,8 @@ const App = () => {
   const [filteredSavedMovieList, setFilteredSavedMovieList] = React.useState(
     []
   );
+  const location = useLocation();
+  const [messageProfile, setMessageProfile] = React.useState("");
   const history = useHistory();
   const windowWidth = useWindowWidth();
   // Получение информации о пользователе
@@ -58,19 +60,27 @@ const App = () => {
       authApiToken(jwt).then((res) => {
         if (res) {
           setLoggedIn(true);
-          history.push("/");
+          history.push(location.pathname);
         }
       });
     } // eslint-disable-next-line
   }, []);
-  // Получение фильмов
-  const editMovies = () => {
+
+  useEffect(() => {
     setIsLoaded(true);
-    getMovies().then((item) => {
-      localStorage.setItem("movies", JSON.stringify(item));
+    if (localStorage.getItem("movies").length === 0) {
+      getMovies().then((res) => {
+        localStorage.setItem("movies", JSON.stringify(res));
+        setIsLoaded(false);
+      });
+    } else {
       setIsLoaded(false);
       setIsMovies(true);
-    });
+    }
+  }, []);
+
+  const editMovies = () => {
+    setIsMovies(true);
   };
 
   // Получение сохраненных карточек
@@ -106,7 +116,6 @@ const App = () => {
   function handleDisableFooter() {
     setDisableFooter(true);
   }
-
   // Добавление фильмов в сохраненные
   const handleSaveMovie = (movie) => {
     if (movie.nameRU !== savedMovies.some((item) => item.nameRU)) {
@@ -155,11 +164,20 @@ const App = () => {
       .catch((err) => console.log(err));
   };
 
+  const handleMessage = (text) => {
+    setMessageProfile(text);
+
+    setTimeout(function () {
+      setMessageProfile("");
+    }, 2500);
+  };
+
   //Изменение профиля
   const handleChangeUser = (name, email) => {
     updateUserInfo(name, email)
       .then((res) => {
         setCurrentUser(res);
+        handleMessage("Данные обновлены успешно!");
       })
       .catch((err) => console.log(err));
   };
@@ -175,9 +193,12 @@ const App = () => {
       <div className="page">
         <Header loggedIn={loggedIn} handleLoggenIn={handleLoggenIn} />
         <Switch>
-          <Route exact path="/">
-            <Main handleLoggenIn={handleLoggenInFalse} />
-          </Route>
+          <Route
+            exact
+            path="/"
+            component={Main}
+            handleLoggenIn={handleLoggenInFalse}
+          ></Route>
           <ProtectedRoute
             exact
             path="/movies"
@@ -220,6 +241,7 @@ const App = () => {
             loggedIn={loggedIn}
             handleLogOut={handleLogOut}
             handleChangeUser={handleChangeUser}
+            messageProfile={messageProfile}
           />
           <Route exact path="/signin">
             <Login handleLoginUser={handleLoginUser} />
