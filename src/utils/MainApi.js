@@ -1,5 +1,4 @@
 const BASE_MAIN_URL = 'https://api.mydiploma.students.nomoredomains.monster';
-let token = localStorage.getItem('jwt');
 
 function responce(res) {
   if (res.ok) {
@@ -14,7 +13,7 @@ function responce(res) {
 export const getUserInfo = () => {
   return fetch(`${BASE_MAIN_URL}/users/me`, {
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${localStorage.getItem("jwt")}`,
       'Content-Type': 'application/json',
     },
   })
@@ -43,7 +42,7 @@ export const login = (email, password) => {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${localStorage.getItem("jwt")}`,
     },
     body: JSON.stringify({ email, password }),
   })
@@ -55,7 +54,7 @@ export const getSavedMovies = () => {
   return fetch(`${BASE_MAIN_URL}/movies`, {
     method: 'GET',
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${localStorage.getItem("jwt")}`,
       'Content-Type': 'application/json',
     },
   })
@@ -68,7 +67,7 @@ export const addToSavedMovies = (movie) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${localStorage.getItem("jwt")}`,
     },
     body: JSON.stringify(movie),
   })
@@ -80,7 +79,7 @@ export const removeSaveMovie = (movie) => {
   return fetch(`${BASE_MAIN_URL}/movies/${movie}`, {
     method: 'DELETE',
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${localStorage.getItem("jwt")}`,
       'Content-Type': 'application/json',
     },
   })
@@ -109,7 +108,7 @@ export const updateUserInfo = (names, emails) => {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${localStorage.getItem("jwt")}`,
     },
     body: JSON.stringify({
       name: names,

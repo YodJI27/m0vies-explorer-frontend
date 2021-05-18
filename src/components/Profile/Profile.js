@@ -1,11 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import "./Profile.css";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
-import { useLocation } from "react-router";
 
 const Profile = (props) => {
   const currentUser = useContext(CurrentUserContext);
-  const location = useLocation();
 
   useEffect(() => {
     props.handleLoggenIn();

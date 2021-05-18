@@ -45,12 +45,12 @@ const App = () => {
   const windowWidth = useWindowWidth();
   // Получение информации о пользователе
   useEffect(() => {
-    if (loggedIn) {
+    if(loggedIn) {
       getUserInfo()
-        .then((res) => {
-          setCurrentUser(res);
-        })
-        .catch((err) => console.log(err));
+      .then((res) => {
+        setCurrentUser(res);
+      })
+      .catch((err) => console.log(err));
     }
   }, [loggedIn]);
   // Получение токена
@@ -68,8 +68,9 @@ const App = () => {
 
   useEffect(() => {
     setIsLoaded(true);
-    if (localStorage.getItem("movies").length === 0) {
-      getMovies().then((res) => {
+    if (!localStorage.getItem("movies")) {
+      Promise.all([getMovies()])
+      .then(([res]) => {
         localStorage.setItem("movies", JSON.stringify(res));
         setIsLoaded(false);
       });
@@ -77,23 +78,24 @@ const App = () => {
       setIsLoaded(false);
       setIsMovies(true);
     }
-  }, []);
+  }, [loggedIn]);
 
   const editMovies = () => {
     setIsMovies(true);
   };
-
   // Получение сохраненных карточек
   useEffect(() => {
-    getSavedMovies()
+    if(loggedIn) {
+      getSavedMovies()
       .then((res) => {
         setIsLoaded(true);
         setSavedMovies(res);
         setFilteredSavedMovieList(res);
         setIsLoaded(false);
       })
-      .catch((err) => console.log(err));
-  }, []);
+      .catch((err) => console.log(err)); 
+    }
+  }, [loggedIn]);
 
   const handleSearch = (evt) => {
     setSearch(evt.target.value);
@@ -157,8 +159,8 @@ const App = () => {
       .then((res) => {
         if (res) {
           localStorage.setItem("jwt", res.token);
-          history.push("/movies");
           setLoggedIn(true);
+          history.push("/movies");
         }
       })
       .catch((err) => console.log(err));

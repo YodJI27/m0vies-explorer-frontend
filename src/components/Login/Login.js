@@ -45,8 +45,7 @@ const Login = (props) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     props.handleLoginUser(email, password);
-  }
-
+  };
 
   return (
     <section className="Register">
@@ -78,7 +77,13 @@ const Login = (props) => {
           ></input>
           <span className="Register__validation">{passwordError}</span>
         </label>
-        <button className={`Register__button ${(emailValid && passwordValid ? "" : "Register__button-disable")}`} disabled={passwordValid && emailValid ? false : true} type="submit">
+        <button
+          className={`Register__button ${
+            emailValid && passwordValid ? "" : "Register__button-disable"
+          }`}
+          disabled={passwordValid && emailValid ? false : true}
+          type="submit"
+        >
           Войти
         </button>
         <p className="Register__reg Register__reg-login">
