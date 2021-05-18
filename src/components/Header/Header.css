@@ -87,6 +87,9 @@
     color: #fff;
     cursor: pointer;
 }
+.header__blue {
+    background-color: #073042;
+}
 .header__text-box {
     display: flex;
     flex-direction: row;

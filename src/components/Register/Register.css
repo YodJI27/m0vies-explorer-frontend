@@ -59,6 +59,10 @@
   cursor: pointer;
   transition: opacity .5s linear;
 }
+.Register__button-disable {
+  cursor: default;
+  background-color: #202020;
+}
 .Register__reg {
   font-family: Inter;
   font-weight: 400;

@@ -1,6 +1,7 @@
 .Movies{
     width: 100%;
     margin: 0;
+    background-color: #202020;
 }
 .Movies__button {
     width: 320px;
@@ -20,6 +21,9 @@
     cursor: pointer;
     margin: 60px 0 80px 0;
     transition: opacity .5s linear;
+}
+.Movies__button-disable {
+    display: none;
 }
 .Movies__button:hover {
     opacity: 0.8;
