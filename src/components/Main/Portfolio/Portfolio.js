@@ -11,7 +11,7 @@ const Portfolio = () => {
             <p className="Portfolio__text">Статичный сайт</p>
             <a
               className="Portfolio__link"
-              href="https://github.com/YodJI27/how-to-learn"
+              href="https://yodji27.github.io/how-to-learn/"
               target="_blank"
               rel="noreferrer"
             >
@@ -22,7 +22,7 @@ const Portfolio = () => {
             <p className="Portfolio__text">Адаптивный сайт</p>
             <a
               className="Portfolio__link"
-              href="https://github.com/YodJI27/russian-travel"
+              href="https://yodji27.github.io/russian-travel/"
               target="_blank"
               rel="noreferrer"
             >
@@ -33,7 +33,7 @@ const Portfolio = () => {
             <p className="Portfolio__text">Одностраничное приложение</p>
             <a
               className="Portfolio__link"
-              href="https://github.com/YodJI27/react-mesto-api-full"
+              href="https://mesto.students.nomoredomains.club"
               target="_blank"
               rel="noreferrer"
             >
