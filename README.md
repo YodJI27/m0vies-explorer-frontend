@@ -1,5 +1,26 @@
 # Diploma / front 
 
+ ## Интерактивная страница, с регистрацией и авторизацией. Возможность найти фильмы на свой вкус, и отложить их в сохраненные для дальнейшего просмотра.  
+ 
+**Применяемые технологии:**  
+1) HTML5,CSS3, JS ES6
+2) React
+3) API
+4) Node.js / express.js
+5) Webpack
+6) Grid
+7) Flex
+8) БЭМ Nested
+9) Адаптация ( в процессе )
+10) Анимации
+11) MongoDB
+12) GIT
+ 
+**Применяем шрифт**   
+
+[Ссылка на шрифт](https://rsms.me/inter/)   
+
+
 Ссылка на сайт -  https://mydiploma.students.nomoredomains.monster/  
 Макет - https://www.figma.com/file/157gHKLn55j5aCimeC5elF/Diploma-(Copy)?node-id=891%3A3857
 
