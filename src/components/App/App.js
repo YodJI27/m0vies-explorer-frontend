@@ -43,6 +43,7 @@ const App = () => {
   const [messageProfile, setMessageProfile] = React.useState("");
   const history = useHistory();
   const windowWidth = useWindowWidth();
+
   // Получение информации о пользователе
   useEffect(() => {
     if(loggedIn) {
@@ -65,7 +66,7 @@ const App = () => {
       });
     } // eslint-disable-next-line
   }, []);
-
+  // Получение фильмов
   useEffect(() => {
     setIsLoaded(true);
     if (!localStorage.getItem("movies")) {
@@ -120,6 +121,7 @@ const App = () => {
   }
   // Добавление фильмов в сохраненные
   const handleSaveMovie = (movie) => {
+    console.log(movie);
     if (movie.nameRU !== savedMovies.some((item) => item.nameRU)) {
       return addToSavedMovies(movie)
         .then((saveMovie) => {

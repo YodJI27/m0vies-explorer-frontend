@@ -11,11 +11,10 @@ const MoviesCard = (props) => {
       return Math.floor(time / 60) + " ч " + (time % 60) + " м";
     }
   };
-
   const handleSetSavedMovie = props.savedMovies.some(
     (item) => item.nameRU === movieCard.nameRU
   );
-
+  
   const checkLikeMovies = `MoviesCard__like ${
     handleSetSavedMovie ? "cards__like_active" : ""
   }`;
