@@ -27,7 +27,13 @@
   margin: 66px 0 0 0;
 }
 .AboutMe__name {
-  font-family: Inter;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  font-family: Inter, 'Arial', 'Helvetica';
   font-weight: 400;
   font-style: normal;
   font-size: 50px;
@@ -37,7 +43,13 @@
   margin: 0 0 18px 0;
 }
 .AboutMe__description {
-  font-family: Inter;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  font-family: Inter, 'Arial', 'Helvetica';
   font-weight: 500;
   font-style: normal;
   font-size: 18px;
@@ -46,7 +58,13 @@
   mix-blend-mode: normal;
 }
 .AboutMe__text {
-  font-family: Inter;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  font-family: Inter, 'Arial', 'Helvetica';
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
@@ -65,7 +83,13 @@
   margin-right: 20px;
 }
 .AboutMe__link {
-  font-family: Inter;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  font-family: Inter, 'Arial', 'Helvetica';
   font-weight: 500;
   font-style: normal;
   font-size: 14px;

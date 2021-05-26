@@ -42,7 +42,13 @@
 }
 .header__text {
     text-decoration: none;
-    font-family: Inter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: Inter, 'Arial', 'Helvetica';
     font-style: normal;
     font-size: 12px;
     font-weight: 500;
@@ -57,7 +63,13 @@
 .header__movies {
     text-decoration: none;
     margin: 28px 0 0 0;
-    font-family: Inter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: Inter, 'Arial', 'Helvetica';
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
@@ -68,7 +80,13 @@
 .header__savedMovies {
     text-decoration: none;
     margin: 28px 0 0 16px;
-    font-family: Inter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: Inter, 'Arial', 'Helvetica';
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
@@ -121,7 +139,13 @@
 }
 .header__sign-text {
     margin: 40px 0 40px 0;
-    font-family: Inter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: Inter, 'Arial', 'Helvetica';
     font-weight: 500;
     font-style: normal;
     font-size: 24px;

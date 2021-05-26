@@ -18,7 +18,13 @@
 .profile__heading {
     margin: 0;
     padding: 0;
-    font-family: Inter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: Inter, 'Arial', 'Helvetica';
     font-weight: 500;
     font-style: normal;
     font-size: 24px;
@@ -36,7 +42,13 @@
     padding-bottom: 16px;
 }
 .profile__text {
-    font-family: Inter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: Inter, 'Arial', 'Helvetica';
     font-weight: 500;
     font-style: normal;
     font-size: 11px;
@@ -46,7 +58,13 @@
 }
 .profile__name {
     text-align: right;
-    font-family: Inter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: Inter, 'Arial', 'Helvetica';
     font-weight: 500;
     font-style: normal;
     font-size: 11px;
@@ -69,7 +87,13 @@
     background-color: #202020;
     border: none;
     color: #fff;
-    font-family: Inter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: Inter, 'Arial', 'Helvetica';
     font-weight: 500;
     font-style: normal;
     font-size: 13px;
@@ -79,7 +103,13 @@
     transition: opacity .5s linear;
 }
 .profile__logOut {
-    font-family: Inter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: Inter, 'Arial', 'Helvetica';
     font-weight: 500;
     font-style: normal;
     font-size: 13px;
