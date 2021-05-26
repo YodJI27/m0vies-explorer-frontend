@@ -30,7 +30,13 @@
     background-color: #202020;
     margin: 15px 0 15px 22px;
     color: #8b8b8b;
-    font-family: Inter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: Inter, 'Arial', 'Helvetica';
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
@@ -61,7 +67,13 @@
 }
 .SearchFrom__text {
     margin: 0;
-    font-family: Inter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: Inter, 'Arial', 'Helvetica';
     font-weight: 400;
     font-style: normal;
     font-size: 13px;

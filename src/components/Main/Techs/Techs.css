@@ -26,7 +26,13 @@
 .Techs__heading {
   max-width: 600px;
   text-align: center;
-  font-family: Inter;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  font-family: Inter, 'Arial', 'Helvetica';
   font-weight: 400;
   font-style: normal;
   font-size: 50px;
@@ -38,7 +44,13 @@
 .Techs__description {
   max-width: 460px;
   text-align: center;
-  font-family: Inter;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  font-family: Inter, 'Arial', 'Helvetica';
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
@@ -62,7 +74,13 @@
   border-radius: 10px;
   color: #fff;
   text-align: center;
-  font-family: Inter;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  font-family: Inter, 'Arial', 'Helvetica';
   font-weight: 400;
   font-style: normal;
   font-size: 14px;

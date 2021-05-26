@@ -16,7 +16,13 @@
     text-align: center;
     border-bottom: 1px solid #424242;
     padding: 0 0 20px 0;
-    font-family: Inter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: Inter, 'Arial', 'Helvetica';
     font-weight: 400;
     font-style: normal;
     font-size: 13px;
@@ -31,7 +37,13 @@
     max-width: 1140px;
 }
 .Footer__copyright {
-    font-family: Inter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: Inter, 'Arial', 'Helvetica';
     font-weight: 400;
     font-style: normal;
     font-size: 13px;
@@ -53,7 +65,13 @@
     margin: 0;
 }
 .Footer__text {
-    font-family: Inter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: Inter, 'Arial', 'Helvetica';
     font-weight: 400;
     font-style: normal;
     font-size: 13px;

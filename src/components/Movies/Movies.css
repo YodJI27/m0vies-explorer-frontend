@@ -11,7 +11,13 @@
     text-align: center;
     padding: 11px 60px 11px 60px;
     margin: 0 0 80px 0;
-    font-family: Inter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-family: Inter, 'Arial', 'Helvetica';
     font-weight: 500;
     font-style: normal;
     font-size: 12px;
